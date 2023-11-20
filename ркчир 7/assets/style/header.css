@@ -1,0 +1,39 @@
+
+
+header {
+    padding: 0 4%;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: space-between;
+    max-height: 100px;
+}
+
+header a {
+    text-decoration: none;
+    align-self: center;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+header li {
+    color: #000;
+    font-family: Nunito Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+header li:hover {
+    color: rgba(214, 89, 217, 1);
+    font-family: Nunito Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

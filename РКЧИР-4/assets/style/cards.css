@@ -1,0 +1,347 @@
+body {
+  background-color: #f8ecf7;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.cards h3 {
+  font-size: 20px;
+  text-align: center;
+}
+.cards p {
+  font-size: 14px;
+}
+
+.card-1,
+.card-2,
+.card-3 {
+  position: relative;
+
+  flex: 1 1;
+  height: 400px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 16px; */
+
+  background-color: transparent;
+}
+.section-3 .card {
+    overflow: hidden;
+}
+
+.section-1 .card::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 120px;
+  width: 50%;
+  height: 100%;
+  text-decoration: none;
+  background: gray;
+  border-radius: 16px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+}
+.section-1 .card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 120px;
+  width: 50%;
+  height: 100%;
+  background: gray;
+  border-radius: 16px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+  filter: blur(30px);
+}
+
+.section-1 .card:hover::before,
+.section-1 .card:hover::after {
+  transform: skewX(0deg);
+  left: 0;
+  margin: 0 40px;
+  width: 80%;
+}
+
+.content {
+  width: 60%;
+  height: 75%;
+  padding: 20px;
+  margin: auto auto;
+  z-index: 3;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.section-1 .card:hover .content {
+  width: 55%;
+  height: 95%;
+  padding: 30px;
+  transition: 0.8s;
+}
+
+.section-1 .card-1::before,
+.section-1 .card-1::after {
+  background: linear-gradient(to right, #2da7ee, #ca82cb);
+}
+.section-1 .card-2::before,
+.section-1 .card-2::after {
+  background: linear-gradient(to right, #b268d2, #d48cd5);
+}
+.section-1 .card-3::before,
+.section-1 .card-3::after {
+  background: linear-gradient(to right, #d48cd5, #8dabb1);
+}
+
+.card button {
+  position: relative;
+  left: 15%;
+  z-index: 2;
+  padding: 10px 40px;
+
+  border-radius: 50px;
+  border: 1px solid #d659d9;
+  background: #d659d9;
+  box-shadow: 0px 5px 30px 0px rgba(239, 93, 168, 0.3);
+
+  color: #000;
+  text-align: center;
+  font-family: Montserrat Alternates;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21.6px;
+  letter-spacing: 0.5px;
+}
+
+.section-1 span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  animation: span-animation-1 2s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+.section-1 span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  animation: span-animation-1 4s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.section-1 span::after {
+  animation: span-animation-2 4s ease-in-out infinite;
+}
+
+.section-1 .card:hover span::before {
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+  bottom: 0;
+  right: 0;
+  left: 400px;
+  top: 440px;
+  transition: 1s;
+}
+.section-1 .card:hover span:after {
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+  right: 30px;
+  top: -100px;
+  transition: 1s;
+}
+
+@keyframes span-animation-1 {
+  0%,
+  100% {
+    transform: translateY(20px);
+  }
+
+  50% {
+    transform: translateX(40px);
+  }
+}
+
+@keyframes span-animation-2 {
+  0%,
+  100% {
+    transform: translateY(20px);
+  }
+
+  50% {
+    transform: translateX(-100px);
+  }
+}
+
+.section-2 .card,
+.section-3 .card {
+  position: relative;
+
+  flex: 1 1;
+  height: 400px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+
+  background-color: var(--pinkcolor, #d48cd5);
+}
+
+.section-2 button,
+.section-3 button {
+  width: 200px;
+  margin: 0 auto;
+  left: 0;
+}
+
+.section-2 {
+  padding: 10px;
+}
+
+.section-2 .card:hover {
+  transform: scale(1.06);
+  transition: 0.5s;
+}
+
+.section-2 .cards:hover .card:not(:hover) {
+  filter: blur(2px);
+  transform: scale(0.85);
+}
+
+.section-3 .card span {
+  position: absolute;
+  transition: 1s;
+  opacity: 0;
+}
+
+.section-3 .card {
+  filter: brightness(0.75);
+}
+.section-3 .card:hover {
+  filter: brightness(1);
+  transition: .3s;
+}
+
+.section-3 .card:hover span {
+  opacity: 1;
+}
+
+.section-3 .cards:hover .card:not(:hover) {
+  filter: brightness(0.5);
+  transform: scale(0.95);
+  transition: 1s;
+}
+
+
+.section-3 .cards .card span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  border-radius: 16px;
+  background: linear-gradient(to right, transparent, #003885);
+  animation: borderTop 1s linear infinite;
+}
+
+.section-3 .card span:nth-child(2) {
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 100%;
+  border-radius: 16px;
+  background: linear-gradient(to bottom, transparent, #003885);
+  animation: borderRight 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+.section-3 .card span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  border-radius: 16px;
+  background: linear-gradient(to left, transparent, #003885);
+  animation: borderBottom 1s linear infinite;
+}
+
+.section-3 .card span:nth-child(4) {
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  border-radius: 16px;
+  background: linear-gradient(to top, transparent, #003885);
+  animation: borderLeft 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes borderTop {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes borderRight {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes borderBottom {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes borderLeft {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+
+.sections {
+    margin: 100px 0;
+}
+
+
+.sections button:hover {
+    background-color: #b268d2;
+    transition: 0.5s;
+}

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин сладостей</title>
+    <link rel="icon" href="assets/image/lollipop.svg" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/style/header.css">
+    <link rel="stylesheet" href="assets/style/footer.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;700&family=Nunito+Sans:opsz,wght@6..12,200&family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a class="logo" href="#main">
+            <img src="assets/image/logo.svg" alt="Логотип сайта">
+        </a>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" id="menu-button">
+            <span class="bar"></span>
+        </label>
+        <nav>
+            <ul>
+                <a href="#main">
+                    <li>Главная</li>
+                </a></a>
+                <a href="#about">
+                    <li>О нас</li>
+                </a>
+                <a href="#catalog">
+                    <li>Каталог</li>
+                </a>
+                <a href="#questions">
+                    <li>ЧаВо</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="notifications" style="display: flex; justify-content: center;">
+        <img src="assets/image/notification-bell-svgrepo-com.svg" style="width: 45px;">
+        <ul>
+            <li>Уведомление 1</li>
+            <li>Уведомление 2</li>
+            <li>Уведомление 3</li>
+            <li>Уведомление 4</li>
+            <li>Уведомление 5</li>
+            <li>Уведомление 6</li>
+            <li>Уведомление 7</li>
+        </ul>
+    </div>
+
+    <main>
+        <div id="main">
+            <div class="box">
+
+                <h1><span class="colortext">Sweetsters</span> – магазин иностранных сладостей и напитков </h1>
+                <p>Побалуй себя вкусняшкой, которую не найти в обычном магазине!</p>
+                <div class="buttons">
+
+                    <a href="#catalog">
+                        <button class="button button-3">
+                            Каталог
+                            <img src="assets/image/button_layer.svg">
+                        </button>
+                    </a>
+
+                    <a href="#about">
+                        <button class="button addition_button  button-2">
+                            О нас
+                        </button>
+                    </a>
+
+                </div>
+            </div>
+            <img src="assets/image/orderonbike.svg" alt="Курьер на байке">
+        </div>
+
+        <img class="separator" src="assets/image/separator.svg">
+        <div id="about">
+            <h2>Почему именно <span class="colortext">мы?</span></h2>
+            <ul>
+                <li>
+                    <p><span class="colortext">Быстро формируем заказы.</span> Все информация о наличии товаров на сайте
+                        актуальная и если указано, что
+                        товар в наличии, значит он действительно есть на нашем складе в Москве.</p>
+                </li>
+                <li>
+                    <p><span class="colortext">Надежно упаковываем сладости</span> в пупырчатую пленку/защитные
+                        сетки/бумажные пакеты, поэтому вкусняшки
+                        приходят в целости и сохранности даже в Приморье и на Крайний Север.</p>
+                </li>
+                <li>
+                    <p><span class="colortext">Только свежие сладости.</span> У нас есть специальный человек, который
+                        проверяет срок годности на каждой
+                        упаковке и пропускает только те сладости, у которых до истечения срока осталось более 2 месяцев.
+                    </p>
+                </li>
+                <li>
+                    <p><span class="colortext">Не меняем товары в заказах на аналогичные без вашего согласия.</span>
+                        Если Вы заказываете
+                        арахисово-клубничные конфеты, то мы положим в заказ именно их, а не подобные. При форс-мажорах
+                        мы в
+                        обязательном порядке связываемся с вами и решаем вопрос.</p>
+                </li>
+
+            </ul>
+        </div>
+
+        <img class="separator" src="assets/image/separator.svg">
+        <div id="catalog">
+            <h2>Каталог</h2>
+            <div class="catalog_table">
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/kinder-hippo.png" alt="Киндер шоколад"></div>
+                    <h3>Kinder Happy Hippo</h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/milka-strawberry.jpg" alt="Милка"></div>
+                    <h3>Milka Strawberry</h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/fini-neon.jpg" alt="Мармеладные мишки "></div>
+                    <h3>Fini Neon Bears </h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/galaxy.jpg" alt="Галакси напиток"></div>
+                    <h3>Galaxy Drink</h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/mms.jpg" alt="М&Мс напиток"></div>
+                    <h3>M&Ms Milk Shake</h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/skittles.jpg" alt="Скитлс напиток"></div>
+                    <h3>Skittles Milk Shake </h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/kinder-hippo.png" alt="Киндер шоколад"></div>
+                    <h3>Kinder Happy Hippo</h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/milka-strawberry.jpg" alt="Милка"></div>
+                    <h3>Milka Strawberry</h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/fini-neon.jpg" alt="Мармеладные мишки "></div>
+                    <h3>Fini Neon Bears </h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/galaxy.jpg" alt="Галакси напиток"></div>
+                    <h3>Galaxy Drink</h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/mms.jpg" alt="М&Мс напиток"></div>
+                    <h3>M&Ms Milk Shake</h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/skittles.jpg" alt="Скитлс напиток"></div>
+                    <h3>Skittles Milk Shake </h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/kinder-hippo.png" alt="Киндер шоколад"></div>
+                    <h3>Kinder Happy Hippo</h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/milka-strawberry.jpg" alt="Милка"></div>
+                    <h3>Milka Strawberry</h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/fini-neon.jpg" alt="Мармеладные мишки "></div>
+                    <h3>Fini Neon Bears </h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/galaxy.jpg" alt="Галакси напиток"></div>
+                    <h3>Galaxy Drink</h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/mms.jpg" alt="М&Мс напиток"></div>
+                    <h3>M&Ms Milk Shake</h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/skittles.jpg" alt="Скитлс напиток"></div>
+                    <h3>Skittles Milk Shake </h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/kinder-hippo.png" alt="Киндер шоколад"></div>
+                    <h3>Kinder Happy Hippo</h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/milka-strawberry.jpg" alt="Милка"></div>
+                    <h3>Milka Strawberry</h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/fini-neon.jpg" alt="Мармеладные мишки "></div>
+                    <h3>Fini Neon Bears </h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/galaxy.jpg" alt="Галакси напиток"></div>
+                    <h3>Galaxy Drink</h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/mms.jpg" alt="М&Мс напиток"></div>
+                    <h3>M&Ms Milk Shake</h3>
+                </div>
+                <div class="catalog_item">
+                    <div class="imgbox"><img src="assets/image/skittles.jpg" alt="Скитлс напиток"></div>
+                    <h3>Skittles Milk Shake </h3>
+                </div>
+            </div>
+        </div>
+        <div class="gallery">
+            <h2>Галерея</h2>
+            <div class="gallery_table">
+                <div class="gallery_sec1">
+                    <img src="assets/image/gallery/donut.svg">
+                </div>
+                <div class="gallery_sec2">
+                    <img class="pineapple" src="assets/image/gallery/pineapple.svg">
+                    <img class="pizza" src="assets/image/gallery/pizza.svg">
+                </div>
+                <div class="gallery_sec3">
+                    <img class="icecream1" src="assets/image/gallery/icecream1.svg">
+                    <img class="icecream2" src="assets/image/gallery/icecream2.svg"">
+            </div>
+        </div>
+        <div class=" form">
+                    <h2>Анкета постоянного покупателя</h2>
+                    <fieldset>
+                        <legend>Анкета постоянного покупателя</legend>
+                        <form style="display: block;" action="типо.php" method="post">
+                            <div>
+                                <label for="text">ФИО</label>
+                                <input required placeholder="Введите ФИО" type="text" name="inputText" id="inputText">
+                            </div>
+                            <div>
+                                <label for="tel">Номер телефона</label>
+                                <input required placeholder="Введите номер телефона" type="tel" name="inputTel"
+                                    id="inputTel">
+                            </div>
+                            <div>
+                                <label for="email">Почта</label>
+                                <input required placeholder="Введите почту" type="email" name="inputEmail"
+                                    id="inputEmail">
+                            </div>
+                            <div>
+                                <label for="password">Пароль</label>
+                                <input required placeholder="Введите пароль" type="password" name="inputPassword"
+                                    id="inputPassword">
+                            </div>
+                            <div>
+                                <label for="file">Фото профиля</label>
+                                <input type="file" name="inputFile" id="inputFile">
+                            </div>
+                            <div>
+                                <label for="checkbox">Предпочтения</label>
+                                <div class="choose_favourite">
+                                    <label for="checkbox">Шоколад<input type="checkbox" name="inputCheckbox"
+                                            value="chocolate"></label>
+                                    <label for="checkbox">Зефир<input value="marshmallow" type="checkbox"
+                                            name="inputCheckbox"></label>
+                                    <label for="checkbox">Мармелад<input type="checkbox" name="inputCheckbox"
+                                            value="marmelad"></label>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="radio">Пол</label>
+
+                                <div class="choose_gender">
+                                    <label for="male">М
+                                        <input checked type="radio" name="gender" value="male">
+                                    </label>
+                                    <label for="female">Ж
+                                        <input type="radio" name="gender" value="female">
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="datetime-local">Дата рождения</label>
+                                <input required id="birthdate" type="datetime-local" name="birthdate"
+                                    min="1900-01-01T00:00" max="2020-01-01T00:00" value="2000-01-01T00:00" />
+                            </div>
+
+                            <label for="textarea">Расскажите о себе</label>
+                            <textarea cols="3" rows="10"></textarea>
+
+                            <label style="display:block; padding-top:10px;" for="select">Ваши аллергии:</label>
+                            <select multiple>
+                                <option value="">Аллергия на шоколад</option>
+                                <option value="">Аллергия на бананы</option>
+                                <option value="">Аллергия на манго</option>
+                                <option value="">Аллергия на молочные продукты</option>
+                            </select>
+
+
+                            <input class="addition_button" type="submit" value="Подтвердить">
+
+                        </form>
+                    </fieldset>
+
+                    <div class="iframes">
+                        <iframe
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A3b96e193b89808d90f0e30a8efef43f790404b954974dea3c1c470a5b1caee46&amp;source=constructor"
+                            width="560px" height="315px" frameborder="0"></iframe>
+
+                        <div class="video-block">
+                            <iframe src="https://www.youtube.com/embed/lngzXkKjxOg?si=iP-eP7CEVWgC23C6" width="560px"
+                                height="315px" frameborder="0"></iframe>
+
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ipsum cupiditate
+                                    amet facilis officiis libero exercitationem ad? Possimus, recusandae nesciunt
+                                    laborum voluptate quia ullam inventore magnam laudantium labore! Cumque, hic.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="buttons" style="width: 50%; margin: 10rem auto;">
+
+                        <a href="#main">
+                            <button class="button addition_button button-4">
+                                <p> Главная</p>
+                            </button>
+                        </a>
+
+                        <a href="#catalog">
+                            <button class="button button-1">
+                                Каталог
+                            </button>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <img src="assets/image/whitelogo.svg">
+        <div class="footer-block">
+            <h3><b>Contact</b></h3>
+            <nav>
+                <ul>
+                    <li><a href="tel:+79637705290"><b>Call :</b> +79637705290</a></li>
+                    <li><a href="mailto:nazirov.f.f@gmail.com"><b>Email :</b> nazirov.f.f@gmail.com</a></li>
+                    <li><b>Address :</b> Sweetsters, Sweets shop, Moscow, Russia.</li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

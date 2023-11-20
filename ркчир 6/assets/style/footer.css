@@ -1,0 +1,30 @@
+footer {
+    background-color: #111116;
+    height: 230px;
+
+    color: #B3B3B3;
+    font-family: Montserrat Alternates;
+}
+footer img {
+    margin: 20px 0 50px 30px;
+}
+footer a {
+    color: #B3B3B3;
+    outline: none;
+}
+
+footer .footer-block {
+    float: right;
+    margin-left: auto;
+    width: 30%;
+}
+
+footer .footer-block h3 {
+    color: #FFF;
+    text-align: center;
+    font-size:x-large;
+}
+
+footer ul {
+    list-style-type: none;
+}
