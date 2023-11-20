@@ -1,11 +1,11 @@
 * {
-    --main-font: "DM Sans";
-    --primary-1: #9B287B;
-    --primary-2: #5C164E;
+    --main-font: "Montserrat Alternates";
+    /* --main-font: "DM Sans"; */
+    --primary-1: #e479c6;
+    --primary-2: #9B287B;
     --primary-3: #ECCBD9;
-
+    --primary-4: #5C164E;
     --secondary-1: #D9DBE9;
-
     --neutral-100: #170F49;
     --neutral-200: #514F6E;
     --neutral-300: #6F6C90;
@@ -16,6 +16,7 @@
     --neutral-800: #FFFFFF;
 
 }
+
 
 h1 {
     font-family: var(--main-font);
