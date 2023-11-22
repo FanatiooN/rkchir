@@ -18,6 +18,8 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;700&family=Nunito+Sans:opsz,wght@6..12,200&family=Poppins:wght@400;500;700&display=swap"
             rel="stylesheet">
+
+        <script defer src="assets/script/script.js"></script>
     </head>
     <body>
         <header>
@@ -46,8 +48,53 @@
             </nav>
         </header>
         <main>
+            <div class="tile">
+                <div class="tile__panel">
+                    <div class="panel__left">
+                        <div class="fab-container">
+                            <button class="fab">
+                                <span class="badge">0</span>
+                                <span class="fab-icon">+</span>
+                            </button>
+                        </div>
+                        <a class="some-button filter">
+                            Фильтр
+                        </a>
+                    </div>
+                    <div class="panel__middle">
+                        <div class="panel__middle-title">Итого: </div>
+                        <div class="panel__middle-total"></div>
+                    </div>
+                    <div class="panel__right">
+                        <a class="some-button clear">
+                            Очистить
+                        </a>
+                        <a class="some-button sort__asc">
+                            Сортировать по возрастанию
+                        </a>
+                        <a class="some-button sort__desc">
+                            Сортировать по убыванию
+                        </a>
+                    </div>
+                </div>
 
-           
+                <div class="tile__items">
+
+                    <!-- <div class="item">
+                        <div class="item__id">0</div>
+                        <div class="item__name">Имя</div>
+                        <div class="item__price">100</div>
+                        <a class="item__action">
+                            <svg class="item__action" fill="currentColor"
+                                width="20px" height="20px"
+                                viewBox="0 0 0.48 0.48"
+                                xmlns="http://www.w3.org/2000/svg"><path
+                                    d="M0.4 0.12h-0.08V0.1a0.06 0.06 0 0 0 -0.06 -0.06h-0.04a0.06 0.06 0 0 0 -0.06 0.06v0.02H0.08a0.02 0.02 0 0 0 0 0.04h0.02v0.22a0.06 0.06 0 0 0 0.06 0.06h0.16a0.06 0.06 0 0 0 0.06 -0.06V0.16h0.02a0.02 0.02 0 0 0 0 -0.04ZM0.2 0.1a0.02 0.02 0 0 1 0.02 -0.02h0.04a0.02 0.02 0 0 1 0.02 0.02v0.02h-0.08Zm0.14 0.28a0.02 0.02 0 0 1 -0.02 0.02H0.16a0.02 0.02 0 0 1 -0.02 -0.02V0.16h0.2Z" /></svg>
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+
         </main>
 
         <footer>
