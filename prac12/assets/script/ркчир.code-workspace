@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "ркчир",
+			"path": "../../../.."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}

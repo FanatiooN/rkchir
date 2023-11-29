@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="assets/style/header.css">
         <link rel="stylesheet" href="assets/style/footer.css">
         <link rel="stylesheet" href="assets/style/index.css">
+        <link rel="stylesheet" href="assets/style/notifications.css">
+        <link rel="stylesheet" href="assets/style/styles.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +27,7 @@
         <header>
             <a href="index.html">
                 <img src="assets/image/logo.svg" alt="Логотип">
-            </a>:
+            </a>
             <nav>
                 <ul>
                     <a href="index.html">
@@ -48,61 +50,39 @@
             </nav>
         </header>
         <main>
-            <div class="tile">
-                <div class="tile__panel">
-                    <div class="panel__left">
-                        <div class="fab-container">
-                            <button class="fab">
-                                <span class="badge">0</span>
-                                <span class="fab-icon">+</span>
-                            </button>
-                        </div>
-                        <div class="wrap-filter"> <a class="some-button filter">
-                                Фильтр
-                            </a>
+            <section>
+                <div class="box">
+                    <div class="container">
+                        <div class="form">
 
-                            <input class='filter-1' type="text" placeholder="От">
-                            <input class='filter-2' type="text" placeholder="До"></div>
-                    </div>
-                    <div class="panel__middle">
-                        <a class="some-button clear">
-                            Очистить
-                        </a>
-                        <div class=" some-button">
-                            <div class="panel__middle-title">Итого: </div>
-                            <div class="panel__middle-total"></div>
+                            <div class="list-container">
+                                <ul class="list">
+
+                                </ul>
+                            </div>
+
+                            <button class="list_btn some-button">Добавить
+                                элементы
+                                в список</button>
+                            <button class="show_btn some-button">Показать
+                                уведомление</button>
                         </div>
                     </div>
-                    <div class="panel__right">
-                        
-                        <a class="some-button sort__asc">
-                            Сортировать по возрастанию
-                        </a>
-                        <a class="some-button sort__desc">
-                            Сортировать по убыванию
-                        </a>
-                    </div>
+
                 </div>
-
-                <div class="tile__items">
-
-                    <!-- <div class="item">
-                        <div class="some_id">0</div>
-                        <div class="some_name">Имя</div>
-                        <div class="some_price">100</div>
-                        <a class="some_action">
-                            <svg class="some_action" fill="currentColor"
-                                width="20px" height="20px"
-                                viewBox="0 0 0.48 0.48"
-                                xmlns="http://www.w3.org/2000/svg"><path
-                                    d="M0.4 0.12h-0.08V0.1a0.06 0.06 0 0 0 -0.06 -0.06h-0.04a0.06 0.06 0 0 0 -0.06 0.06v0.02H0.08a0.02 0.02 0 0 0 0 0.04h0.02v0.22a0.06 0.06 0 0 0 0.06 0.06h0.16a0.06 0.06 0 0 0 0.06 -0.06V0.16h0.02a0.02 0.02 0 0 0 0 -0.04ZM0.2 0.1a0.02 0.02 0 0 1 0.02 -0.02h0.04a0.02 0.02 0 0 1 0.02 0.02v0.02h-0.08Zm0.14 0.28a0.02 0.02 0 0 1 -0.02 0.02H0.16a0.02 0.02 0 0 1 -0.02 -0.02V0.16h0.2Z" /></svg>
-                        </a>
-                    </div> -->
-                </div>
-            </div>
-
+            </section>
         </main>
+        <div class="notifications-container">
+            <div class="fab" onclick="toggleNotifications()">
+                <span class="fab-icon">N</span>
+                <span class="badge">0</span>
+            </div>
+            <div class="notifications-panel">
+                <ul class="notifications-list">
 
+                </ul>
+            </div>
+        </div>
         <footer>
             <div class="wrap-footer-blocks">
                 <div class="footer-block footer-block-1">
