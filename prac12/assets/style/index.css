@@ -9,10 +9,15 @@
 
 
 
-main section {
-  height: 100%;
-  margin: 120.5px auto auto;
+main {
+  min-height: 70vh;
+
+  section {
+    height: 100%;
+    margin: 120.5px auto auto;
+  }
 }
+
 
 section {
   display: flex;
@@ -92,7 +97,7 @@ input {
 
 .some-button {
   appearance: none;
-  background-color: rgb(87, 91, 199);
+  background-color: var(--primary-2);
   border: 1px solid hsla(0, 100%, 100%, .08);
   border-radius: 6px;
   cursor: pointer;
