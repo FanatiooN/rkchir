@@ -1,0 +1,150 @@
+.colortext {
+    color: var(--primary-1);
+}
+
+
+
+
+
+
+main {
+    min-height: 70vh;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.tile {
+    min-height: 70vh;
+    position: relative;
+    height: 100%;
+    background: var(--primary-3);
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    overflow: hidden;
+    z-index: 0;
+    margin: 40px 0;
+    z-index: 3;
+}
+
+
+.tile__panel {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: var(--primary-3);
+}
+
+.item__name {
+    display: flex;
+    gap: 20px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%;
+}
+
+
+.panel__right,
+.panel__left,
+.panel__middle {
+    display: flex;
+    gap: 10px;
+}
+
+.item__action {
+    display: block;
+    cursor: pointer;
+}
+
+.item>* {
+    width: 100px;
+}
+
+.item__action {
+    width: 40px;
+}
+
+.item__action:hover {
+    color: #b4bcd0;
+}
+
+.item_price {
+    text-align: end;
+}
+
+.some-button {
+    color: var(--neutral-800);
+    background: var(--primary-1);
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    appearance: none;
+    font: inherit;
+    border: 1px solid #2e2e32;
+    border-radius: 100px;
+    cursor: pointer;
+    padding: 0.2em 0.6em;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.some-button:active {
+    transform: scale(.90);
+}
+
+.some-button:hover {
+    /* box-shadow: inset 6.5em 0 0 0 #66c887; */
+}
+
+.some-button span {
+    z-index: 1;
+    position: relative;
+}
+
+.fab-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fab {
+    background-color: rgb(102, 107, 226);
+    color: #ffffff;
+    border: 1px solid hsla(0, 0%, 100%, .08);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+}
+
+.fab:hover {
+    background-color: rgb(127, 131, 234);
+}
+
+.fab-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #161618;
+    color: #fff;
+    border-radius: 50%;
+    padding: 3px 8px;
+    font-size: 14px;
+}
