@@ -72,7 +72,7 @@ listButton.addEventListener('click', addListItems);
 // №4
 function showNotification(options) {
   var notification = document.createElement('div');
-  notification.classList.add(options.type);
+  notification.classList.add('info');
   notification.classList.add('toast-notification');
   setTimeout(() => {
     notification.classList.add('show');
@@ -89,22 +89,18 @@ function showNotification(options) {
   }, 1000);
 }
 
-function generateRandomString(length) {
-  const characters = 'A BCDEF GHIJ KLMNOPQ RSTUV WXYZabcdefgh ijklmno pqrstu vwx y z012 3456789';
-  let result = '';
-  for (let i = 0; i < length; i++) {
-    result += characters.charAt(Math.floor(Math.random() * characters.length));
-  }
-  return result;
+function takeRandomWord() {
+    let words = ['апельсин', 'ананас', 'автобус'];
+  
+  return words[Math.floor(Math.random() * words.length)];
 }
-const notificationTypes = ['warning', 'danger', 'info'];
+
 
 const showButton = document.querySelector('.show_btn');
 showButton.addEventListener('click', function () {
   showNotification(
     {
-      content: generateRandomString(20),
-      type: notificationTypes[Math.floor(Math.random() * notificationTypes.length)]
+      content: takeRandomWord(),
     }
   );
 });
