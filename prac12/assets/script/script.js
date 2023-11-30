@@ -2,10 +2,6 @@
 let notificationCounter = 0;
 let notificationInterval;
 
-const N_TIMEOUT = 1000;
-const S_TIMEOUT = 5000;
-
-
 const fabIcon = document.querySelector('.fab-icon');
 
 function delay(f, ms) {
@@ -25,7 +21,7 @@ function generateNotification() {
 }
 
 function startNotificationInterval() {
-  notificationInterval = setInterval(generateNotification, N_TIMEOUT);
+  notificationInterval = setInterval(generateNotification, 3000);
   fabIcon.textContent = "N";
 }
 
@@ -39,7 +35,7 @@ function toggleNotifications() {
   panel.style.display = panel.style.display === 'none' || panel.style.display === '' ? 'block' : 'none';
   if (panel.style.display === 'block' && fabIcon.textContent != "S") {
     stopNotificationInterval();
-    let startAgain = delay(startNotificationInterval, S_TIMEOUT);
+    let startAgain = delay(startNotificationInterval, 10000);
     startAgain();
   }
 }
@@ -59,7 +55,8 @@ function addListItems() {
 
       var list = document.querySelector('.list');
       list.appendChild(listItem);
-    } else {
+    } 
+    else {
       clearInterval(interval);
     }
   }, 0);
