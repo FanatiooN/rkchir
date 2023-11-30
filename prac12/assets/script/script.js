@@ -4,11 +4,7 @@ let notificationInterval;
 
 const fabIcon = document.querySelector('.fab-icon');
 
-function delay(f, ms) {
-  return function () {
-    setTimeout(() => f.apply(this, arguments), ms);
-  };
-}
+
 
 function generateNotification() {
   notificationCounter++;
@@ -28,6 +24,13 @@ function startNotificationInterval() {
 function stopNotificationInterval() {
   clearInterval(notificationInterval);
   fabIcon.textContent = "S";
+}
+
+
+function delay(f, ms) {
+  return function () {
+    setTimeout(() => f.apply(this, arguments), ms);
+  };
 }
 
 function toggleNotifications() {
