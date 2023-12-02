@@ -77,18 +77,3 @@
         }
     }
 }
-
-
-
-#about {
-    margin: 3% 10%;
-
-    >h2 {
-        text-align: center;
-    }
-
-    li {
-        list-style-type: none;
-    }
-
-}
