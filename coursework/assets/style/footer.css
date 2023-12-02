@@ -21,14 +21,14 @@ footer {
 
 
         h6 {
-            color: var(--neutral-100);
+            color: var(--neutral-800);
             margin: 0;
             margin-bottom: 1rem;
         }
 
         a,
         p {
-            color: var(--neutral-300);
+            color: var(--neutral-600);
             list-style-type: none;
             text-decoration: none;
         }
