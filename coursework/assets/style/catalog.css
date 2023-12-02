@@ -53,6 +53,8 @@
         margin: 0;
         font-size: 32px;
         font-weight: bold;
+
+        color: var(--primary-2);
     }
 
     .name {
@@ -69,15 +71,16 @@
 
 
     .rate {
+        margin-top: 10px;
         display: flex;
         align-items: center;
 
-        img {
+        svg {
+            padding-right: 8px;
             width: 19px;
             height: 19px;
-
-            stroke-width: 2px;
-            stroke: var(--primary-2);
+            
+            stroke : var(--primary-2);
         }
     }
 
