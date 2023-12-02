@@ -1,3 +1,11 @@
+
+.cards {
+    margin: 10%;
+    gap:40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
 .card {
     position: relative;
     font-family: var(--main-font);
@@ -13,6 +21,7 @@
         margin-left: 22px;
         margin-top: 22px;
     }
+
     .item_img {
         overflow: hidden;
         position: relative;
@@ -79,8 +88,8 @@
             padding-right: 8px;
             width: 19px;
             height: 19px;
-            
-            stroke : var(--primary-2);
+
+            stroke: var(--primary-2);
         }
     }
 
