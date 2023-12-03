@@ -1,5 +1,6 @@
 header {
     display: flex;
+    position: relative;
     flex-direction: row;
     justify-content: space-around;
     height: 6rem;
@@ -47,6 +48,28 @@ header {
         border-bottom: 0.125rem solid var(--primary-1);
         transition: .1s;
     }
+
+
+
+
+    /* mobile */
+    .hamburger {
+        display: none;
+        position: absolute;
+        z-index: 100;
+        top: 30%;
+        right: 1rem;
+        padding: 4px;
+
+        border: none;
+        background: white;
+        cursor: pointer;
+    }
+
+    .showMenu {
+        transform: translateY(0);
+    }
+
 }
 
 .block {
@@ -59,10 +82,44 @@ header {
     flex-shrink: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     header {
-        nav {
+        ul {
             display: none;
         }
+
+        nav button {
+            display: none;
+        }
+
+        .hamburger {
+            display: block;
+        }
+
     }
+
+     header ul {
+        display: block;
+        position: fixed;
+        transform: translateY(-100%);
+        transition: transform 0.2s;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99;
+        background: white;
+        
+        list-style: none;
+        padding-top: 4rem;
+
+        a {
+            display: block;
+            padding-top: 6rem;
+            width: 6rem;
+            margin-left: 30%;
+            margin-right: auto;
+        }
+    }
+
 }
