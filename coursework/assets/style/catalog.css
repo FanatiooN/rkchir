@@ -1,8 +1,10 @@
-
 .cards {
-    margin: 10%;
-    gap:40px;
+
+    gap: 80px;
     display: grid;
+    max-width: 70%;
+    margin: 0 auto;
+    
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -141,6 +143,8 @@
 
 @media screen and (max-width: 1024px) {
     .cards {
+        margin: 2%;
+        gap: 50px;
         grid-template-columns: repeat(2, 1fr);
     }
 }
