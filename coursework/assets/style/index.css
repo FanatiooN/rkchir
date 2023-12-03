@@ -1,57 +1,58 @@
-*,:after,:before{
-    padding:0;
-    margin:0;
-    box-sizing:border-box
-  }
-  
-  .wrap-main-box-and-bike {
+body,
+:after,
+:before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrap-main-box-and-bike {
     min-height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
-    .main-box {
-        margin-top: 20vh;
-        width: 50%;
-    }
-
-    .bike {
-        width: auto;
-    }
-
-    .buttons {
-        display: flex;
-        gap: 25%;
-
-        a {
-            text-decoration: none;
-            color: var(--secondary-1);
-
-            padding: 1rem 1.5rem;
-            border-radius: 1rem;
-            border: 0.25rem solid var(--primary-2);
-            margin: auto 0;
-            width: 15rem;
-
-            text-align: center;
-        }
-
-        .button-1 {
-            background: var(--primary-1);
-        }
-
-        .button-2 {
-            background: var(--primary-2);
-        }
-
-        a:hover {
-            background-color: var(--primary-3);
-            color: var(--neutral-800);
-            transition: 0.3s;
-        }
-    }
 }
 
+.wrap-main-box-and-bike .main-box {
+    margin-top: 20vh;
+    width: 50%;
+}
+
+.wrap-main-box-and-bike .bike {
+    width: auto;
+}
+
+.wrap-main-box-and-bike .buttons {
+    display: flex;
+    gap: 25%;
+}
+
+.wrap-main-box-and-bike .buttons a {
+    text-decoration: none;
+    color: var(--secondary-1);
+
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    border: 0.25rem solid var(--primary-2);
+    margin: auto 0;
+    width: 15rem;
+
+    text-align: center;
+}
+
+.wrap-main-box-and-bike .buttons .button-1 {
+    background: var(--primary-1);
+}
+
+.wrap-main-box-and-bike .buttons .button-2 {
+    background: var(--primary-2);
+}
+
+.wrap-main-box-and-bike .buttons a:hover {
+    background-color: var(--primary-3);
+    color: var(--neutral-800);
+    transition: 0.3s;
+}
 
 #wide-line {
     display: flex;
@@ -68,22 +69,23 @@
     height: 20rem;
     margin: 5% 0;
 
-    .wide-line-block {
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-
-        span {
-            color: var(--neutral-100);
-        }
-
-        p {
-            margin-top: 8rem;
-            text-align: center;
-            color: var(--neutral-400);
-        }
-    }
 }
 
+#wide-line .wide-line-block {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+
+}
+
+#wide-line .wide-line-block span {
+    color: var(--neutral-100);
+}
+
+#wide-line .wide-line-block p {
+    margin-top: 8rem;
+    text-align: center;
+    color: var(--neutral-400);
+}
 
 .reviews {
     display: flex;
@@ -100,7 +102,8 @@
     padding: 0 30px 30px;
     border-radius: 30px;
 
-    h6 {
-        margin: 20px 0 0;
-    }
+}
+
+.review h6 {
+    margin: 20px 0 0;
 }
