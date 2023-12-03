@@ -43,7 +43,7 @@ header {
     }
 
 
-    nav a:hover {
+    nav ul a:hover{
         color: var(--primary-1);
         border-bottom: 0.125rem solid var(--primary-1);
         transition: .1s;
