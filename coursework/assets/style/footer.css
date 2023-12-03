@@ -1,6 +1,6 @@
 footer {
     padding: 20px;
-    background: #ffffff;
+    background: var(--neutral-300);
 
 
     .wrap-footer-blocks {

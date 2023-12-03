@@ -77,3 +77,24 @@
         }
     }
 }
+
+
+.reviews {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    overflow-y: scroll;
+    margin: 50px 0 250px;
+}
+
+.review {
+    flex-shrink: 0;
+    background: var(--neutral-400);
+    width: 20rem;
+    padding: 0 30px 30px;
+    border-radius: 30px;
+
+    h6 {
+        margin: 20px 0 0;
+    }
+}

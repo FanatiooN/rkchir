@@ -22,6 +22,7 @@ h1 {
     font-family: var(--main-font);
     font-weight: bold;
     font-size: 70px;
+    text-align: center;
 }
 
 h2 {
@@ -123,3 +124,4 @@ h6 {
         font-size: 16px;
     }
 }
+
