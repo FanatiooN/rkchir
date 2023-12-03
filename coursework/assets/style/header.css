@@ -58,3 +58,11 @@ header {
     align-items: center;
     flex-shrink: 0;
 }
+
+@media screen and (max-width: 768px) {
+    header {
+        nav {
+            display: none;
+        }
+    }
+}

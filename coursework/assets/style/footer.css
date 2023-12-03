@@ -71,3 +71,14 @@ footer {
         }
     }
 }
+
+
+@media screen and (max-width: 768px) {
+    footer {
+        .wrap-footer-blocks {
+            display: grid;
+            grid-template-columns: 1.3fr repeat(2, 1fr);
+        }
+    }
+    
+}
