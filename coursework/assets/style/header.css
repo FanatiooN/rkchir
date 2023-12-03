@@ -98,7 +98,7 @@ header {
 
     }
 
-     header ul {
+    header ul {
         display: block;
         position: fixed;
         transform: translateY(-100%);
@@ -109,14 +109,14 @@ header {
         bottom: 0;
         z-index: 99;
         background: white;
-        
+
         list-style: none;
         padding-top: 4rem;
 
         a {
             display: block;
             padding-top: 6rem;
-            width: 6rem;
+            width: 8rem;
             margin-left: 30%;
             margin-right: auto;
         }
