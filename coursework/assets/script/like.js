@@ -21,7 +21,7 @@ cards.addEventListener('click', (e) => {
 
 
         let name = someCard.querySelector('.name').innerHTML;
-        let price = someCard.querySelector('.price').innerHTML;
+        let price = someCard.querySelector('.price').innerHTML.split(' ')[0];
         let rating = someCard.querySelector('.rating').innerHTML;
         let img = someCard.querySelector('.like + img').getAttribute('src');
         let cnt = someCard.querySelector('.count').innerHTML;

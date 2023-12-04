@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (someCard != null && someCard != '') {
             console.log(someCard);
             someCard = JSON.parse(someCard);
-            let name = Number(someCard.name);
+            let name = someCard.name;
             let price = Number(someCard.price);
             let rating = Number(someCard.rating);
             let img = someCard.img;
@@ -31,17 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     let card = document.createElement('div');
                     card.classList.add('card');
                     cards.appendChild(card)
-                    
+
                     card.innerHTML += `
                     <div class="item_img">
-                        <button class="like">
-                            <img src="assets/image/cards/heart.svg">
-                        </button>
-                        <img src="assets/image/cards/rafaello.jpg">
+                        <img src="${img}">
                     </div>
                     <div class="info">
-                        <h6 class="price">1430 р</h6>
-                        <p class="name">Конфеты Rafaello</p>
+                        <h6 class="price">${price + ' р'}</h6>
+                        <p class="name">${name}</p>
                         <div class="rate">
                             <svg xmlns="http://www.w3.org/2000/svg" width="21"
                                 height="21" viewBox="0 0 21 21" fill="none">
@@ -51,10 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
                                     stroke-linecap="round" />
                             </svg>
 
-                            <p class="rating">4.8</p>
+                            <p class="rating">${rating}</p>
                         </div>
                         `
-                    
+
                 }
             }
         }
