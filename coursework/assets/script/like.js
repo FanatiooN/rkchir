@@ -1,6 +1,13 @@
 const cards = document.querySelector('.cards');
 let cardArr = cards.querySelectorAll('.card');
 
+document.addEventListener('DOMContentLoaded', () => {
+    let maxCardCount = 100;
+    for (let i = 1; i < maxCardCount; i++) {
+        localStorage.setItem('card_' + i, '');
+    }
+})
+
 
 cards.addEventListener('click', (e) => {
     let target = e.target;
