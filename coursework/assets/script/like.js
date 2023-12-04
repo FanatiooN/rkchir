@@ -1,30 +1,42 @@
 const cards = document.querySelector('.cards');
-let cardArr = Array(cards.querySelectorAll('.card'));
-console.log(cardArr, typeof cardArr);
+let cardArr = cards.querySelectorAll('.card');
 
 
 cards.addEventListener('click', (e) => {
     let target = e.target;
     if (target.closest('.like')) {
-        let likedCards = localStorage.getItem('likedCards') || [];
-        let cardId = target.parentElement.parentElement.parentElement;
+        let someCard = target.parentElement.parentElement;
+        if (someCard.classList.contains('item_img')) {
+            someCard = someCard.parentElement;
+        }
 
-        console.log(likedCards, typeof likedCards);
+        let cardId = someCard.getAttribute('data-id');
 
 
-        if (target.closest('.like').classList.contains('liked'))
-        {
+        let name = someCard.querySelector('.name').innerHTML;
+        let price = someCard.querySelector('.price').innerHTML;
+        let rating = someCard.querySelector('.rating').innerHTML;
+        let img = someCard.querySelector('.like + img').getAttribute('src');
+        let cnt = someCard.querySelector('.count').innerHTML;
+
+
+        if (target.closest('.like').classList.contains('liked')) {
             target.closest('.like').classList.remove('liked');
-            likedCards.remove(likedCards.indexOf(cardId));
-            localStorage.setItem('likedCards', likedCards);
         }
-        else
-        {
+        else {
             target.closest('.like').classList.add('liked');
-            likedCards.push(cardId);
-            localStorage.setItem('likedCards', likedCards);
         }
-        
-        console.log(cardArr, cardArr.length);
+
+        let isLiked = someCard.querySelector('.like').classList.contains('liked')
+        let someCardInfo = {
+            name,
+            price,
+            rating,
+            img,
+            cnt,
+            isLiked
+        }
+
+        localStorage.setItem('card_' + cardId, JSON.stringify(someCardInfo))
     }
 });
