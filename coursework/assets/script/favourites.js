@@ -1,6 +1,5 @@
 let maxCardCount = 100;
 
-
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelector('.cards');
 
@@ -8,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let someCard = localStorage.getItem('card_' + i);
 
         if (someCard != null && someCard != '') {
-            console.log(someCard);
+
             someCard = JSON.parse(someCard);
             let name = someCard.name;
             let price = Number(someCard.price);
@@ -60,4 +59,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     let cardsCount = cards.querySelectorAll('.card').length;
+    if (cardsCount < 1) {
+        let h2 = document.createElement('h2');
+        h2.innerHTML = 'Упс... Здесь ничего нет.';
+        let oops = cards.querySelector('.oops');
+        console.log(oops);
+        oops.appendChild(h2)
+    }
 })

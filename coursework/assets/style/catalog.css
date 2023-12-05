@@ -1,5 +1,5 @@
 .cards {
-
+    min-height: 20vw;
     gap: 80px;
     display: grid;
     max-width: 70%;
