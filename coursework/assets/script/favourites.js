@@ -1,9 +1,10 @@
-let maxCardCount = 100;
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelector('.cards');
+    let maxCardCount = localStorage.getItem('cardCount') || 0;
 
-    for (let i = 1; i < maxCardCount; i++) {
+    for (let i = 1; i < maxCardCount + 1    ; i++) {
         let someCard = localStorage.getItem('card_' + i);
 
         if (someCard != null && someCard != '') {

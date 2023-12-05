@@ -1,10 +1,35 @@
 const cards = document.querySelector('.cards');
-let cardArr = cards.querySelectorAll('.card');
+
+function getCardInfo(someCard) {
+    let name = someCard.querySelector('.name').innerHTML;
+    let price = someCard.querySelector('.price').innerHTML.split(' ')[0];
+    let rating = someCard.querySelector('.rating').innerHTML;
+    let img = someCard.querySelector('.like + img').getAttribute('src');
+    let cnt = someCard.querySelector('.count').innerHTML;
+    let isLiked = someCard.querySelector('.like').classList.contains('liked');
+
+    let someCardInfo = {
+        name,
+        price,
+        rating,
+        img,
+        cnt,
+        isLiked
+    };
+
+    return someCardInfo;
+}
 
 document.addEventListener('DOMContentLoaded', () => {
-    let maxCardCount = 100;
-    for (let i = 1; i < maxCardCount; i++) {
-        localStorage.setItem('card_' + i, '');
+    let cardArr = cards.querySelectorAll('.card');
+    localStorage.setItem('cardCount', cardArr.length);
+    
+    for (let i = 1; i < cardArr.length; i++) {
+
+        let someCard = cardArr[i];
+        let someCardInfo = getCardInfo(someCard);
+
+        localStorage.setItem('card_' + i, JSON.stringify(someCardInfo));
     }
 })
 
@@ -17,16 +42,6 @@ cards.addEventListener('click', (e) => {
             someCard = someCard.parentElement;
         }
 
-        let cardId = someCard.getAttribute('data-id');
-
-
-        let name = someCard.querySelector('.name').innerHTML;
-        let price = someCard.querySelector('.price').innerHTML.split(' ')[0];
-        let rating = someCard.querySelector('.rating').innerHTML;
-        let img = someCard.querySelector('.like + img').getAttribute('src');
-        let cnt = someCard.querySelector('.count').innerHTML;
-
-
         if (target.closest('.like').classList.contains('liked')) {
             target.closest('.like').classList.remove('liked');
         }
@@ -34,16 +49,8 @@ cards.addEventListener('click', (e) => {
             target.closest('.like').classList.add('liked');
         }
 
-        let isLiked = someCard.querySelector('.like').classList.contains('liked')
-        let someCardInfo = {
-            name,
-            price,
-            rating,
-            img,
-            cnt,
-            isLiked
-        }
-
-        localStorage.setItem('card_' + cardId, JSON.stringify(someCardInfo))
+        let someCardInfo = getCardInfo(someCard);
+        let cardId = someCard.getAttribute('data-id');
+        localStorage.setItem('card_' + cardId, JSON.stringify(someCardInfo));
     }
 });

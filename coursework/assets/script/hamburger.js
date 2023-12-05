@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let menuIcon = document.querySelector(".menuIcon");
     let menu = document.querySelector("header ul");
     
-    // let menuItems = document.querySelectorAll("header ul li");
 
     closeIcon.style.display = "none";
     menuIcon.style.display = "block";
