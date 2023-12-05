@@ -4,7 +4,7 @@ const cart_items = document.querySelector('.cart_items');
 let maxCardCount = 100;
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     for (let i = 1; i < maxCardCount; i++) {
         let someCard = localStorage.getItem('card_' + i);
 
@@ -14,12 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
             let name = someCard.name;
             let price = Number(someCard.price);
             let cnt = Number(someCard.cnt);
-
             if (cnt != 0) {
                 console.log(someCard);
                 let cart_item = document.createElement('div');
-                cart_item.classList.add('cart_item');
-                cart_items.appendChild(cart_item)
+                cart_item.setAttribute('data-id', i);
+                cart_item.classList.add('cart_item')
+                cart_items.appendChild(cart_item);
 
                 cart_item.innerHTML += `
                         <div class="description">

@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         break;
                     }
                 }
-                console.log(i);
                 if (!isExist) {
                     let card = document.createElement('div');
                     card.classList.add('card');
