@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (cardsCount < 1) {
         let h2 = document.createElement('h2');
         h2.innerHTML = 'Упс... Здесь ничего нет.';
-        let oops = cards.querySelector('.oops');
+        let oops = document.querySelector('.oops');
         console.log(oops);
         oops.appendChild(h2)
     }
