@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let price = Number(someCard.price);
             let cnt = Number(someCard.cnt);
 
-            if (cnt == 0) {
+            if (cnt != 0) {
                 console.log(someCard);
                 let cart_item = document.createElement('div');
                 cart_item.classList.add('cart_item');
