@@ -1,6 +1,5 @@
 .cart {
     width: 744px;
-    min-height: 565px;
     margin: 0 auto 100px;
     padding: 30px 0;
     flex-shrink: 0;
@@ -8,6 +7,11 @@
     border-radius: 32px;
     border: 1px solid var(--primary-2, #5C164E);
     background: var(--neutral-300, #EFF0F6);
+}
+
+.cart_items {
+
+    min-height: 565px;
 }
 
 .cart_item {
@@ -122,4 +126,33 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.end_cart .submit_cart_button {
+    padding: 18px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+    border-radius: 76px;
+    background: var(--neutral-700);
+
+    border: none;
+
+    color: var(--neutral-100);
+    font-size: 16px;
+    font-family: var(--main-font);
+    font-weight: 700;
+}
+
+.end_cart .total_count {
+    color: #000;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Montserrat Alternates;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    /* 166.667% */
 }
