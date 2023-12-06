@@ -4,6 +4,7 @@ for (let i = 0; i < cardArr.length; i++) {
 
     let count = cardArr[i].querySelector('.count');
     let someCard = localStorage.getItem('card_' + (i+1));
+    console.log(someCard);
     someCard = JSON.parse(someCard)
     someCard.count = someCard.count ?? 0;
     count.innerHTML = someCard.count;
