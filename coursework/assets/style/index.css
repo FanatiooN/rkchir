@@ -110,3 +110,37 @@ body,
 .review h6 {
     margin: 20px 0 0;
 }
+
+
+
+@media screen and (max-width: 1024px) {
+    .wrap-main-box-and-bike .main-box {
+        margin-top: 0;
+        width: 80%;
+    }
+
+    .bike {
+        display: none;
+    }
+
+
+    .wrap-main-box-and-bike {
+
+        min-height: 20vh;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+
+    .wrap-main-box-and-bike .buttons {
+        gap: 5%;
+    }
+
+    .reviews {
+        flex-direction: column;
+        margin: 0 auto;
+        width: 80%;
+    }
+}
