@@ -5,7 +5,7 @@ function getCardInfo(someCard) {
     let price = someCard.querySelector('.price').innerHTML.split(' ')[0];
     let rating = someCard.querySelector('.rating').innerHTML;
     let img = someCard.querySelector('.like + img').getAttribute('src');
-    let cnt = someCard.querySelector('.count').innerHTML;
+    let count = someCard.querySelector('.count').innerHTML;
     let isLiked = someCard.querySelector('.like').classList.contains('liked');
 
     let someCardInfo = {
@@ -13,7 +13,7 @@ function getCardInfo(someCard) {
         price,
         rating,
         img,
-        cnt,
+        count,
         isLiked
     };
 
