@@ -19,9 +19,19 @@ buttons.addEventListener('click', (e) => {
         if (buttons.classList.contains('cart_items')) {
             let price = targetPP.querySelector('.price');
             let cost = targetPP.querySelector('.cost');
-            console.log(price, price.innerHTML, cost, cost.innerHTML);
-            totalCnt += price.innerHTML;
-            cost.innerHTML = `${price.innerHTML * count.innerHTML} р`;
+            
+            price = String(price.innerHTML).split(' ')[0];
+            price = Number(price);
+
+            totalCnt += price;
+
+            let cart = targetPP.parentElement.parentElement;
+            
+            let total_count = cart.querySelector('.total_count');
+            
+            total_count.innerHTML = `Итоговая сумма: ${totalCnt}`;
+
+            cost.innerHTML = `${price * count.innerHTML} р`;
         }
     }
     else if (target.classList.contains('decrease') &&
@@ -32,7 +42,6 @@ buttons.addEventListener('click', (e) => {
         window.localStorage.setItem('card_' + cardId, JSON.stringify(someCard));
         
     }
-    console.log(window.localStorage.getItem('card_' + (cardId )));
 
 
 })

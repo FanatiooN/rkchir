@@ -43,6 +43,45 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    total_count.innerHTML = totalCnt;
+    total_count.innerHTML = `Итоговая сумма: ${totalCnt}`;
 });
 
+
+
+const submit_cart_button = document.querySelector('.submit_cart_button');
+
+submit_cart_button.addEventListener('click', () => {
+    let totalItemsCnt = 0;
+
+    for (let i = 0; i < maxCardCount; i++) {
+        let someCard = window.localStorage.getItem('card_' + i);
+
+
+        if (someCard != null && someCard != '') {
+            let cnt = Number(someCard.count);
+            if (cnt > 0) {
+                totalItemsCnt += cnt;
+            }
+        }
+    }
+
+    let message = 'Упс.. В корзине нет товаров!';
+    if (totalItemsCnt)
+        message = `Заказ из ${totalItemsCnt} был оформлен!`;
+
+    cart_items.innerHTML = '';
+    for (let i = 0; i < maxCardCount; i++) {
+        let someCard = window.localStorage.getItem('card_' + i);
+
+
+        if (someCard != null && someCard != '') {
+
+            someCard = JSON.parse(someCard);
+            someCard.count = 0;
+
+            window.localStorage.setItem('card_'+i, JSON.stringify(someCard));
+        }
+
+    }
+    alert(message);
+})
