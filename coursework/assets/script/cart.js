@@ -1,7 +1,9 @@
 const cart = document.querySelector('.cart');
 const cart_items = document.querySelector('.cart_items');
+const total_count = document.querySelector('.total_count');
 
 let maxCardCount = 100;
+let totalCnt = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -13,8 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
             someCard = JSON.parse(someCard);
             let name = someCard.name;
             let price = Number(someCard.price);
-            let cnt = Number(someCard.cnt);
-            if (cnt != 0) {
+            let cnt = Number(someCard.count);
+            if (cnt > 0) {
+                totalCnt += price * cnt;
+
                 console.log(someCard);
                 let cart_item = document.createElement('div');
                 cart_item.setAttribute('data-id', i);
@@ -38,4 +42,36 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+
+
+    total_count.innerHTML = totalCnt;
 });
+
+
+// let buttons = document.querySelector('.cart_items')
+
+// buttons.addEventListener('click', (e) => {
+//     let target = e.target;
+    
+//     let count = target.parentElement.parentElement.querySelector('.count');
+//     console.log(count);
+//     if (target.classList.contains('increase')) 
+//     {
+//         let cardId = target.parentElement.parentElement.getAttribute('data-id');
+        
+//         let someCard = JSON.parse(localStorage.getItem('card_'+cardId))
+//         someCard.count = ++count.innerHTML;
+//         localStorage.setItem('card_' + cardId, JSON.stringify(someCard));
+        
+//         console.log(`upd local storage, ${localStorage.getItem('card_'+cardId)}`);
+//     }
+//     else if (target.classList.contains('decrease') &&
+//              count.innerHTML != 0) 
+//     {    
+//         let someCard = JSON.parse(localStorage.getItem('card_'+cardId))
+//         someCard.count = --count.innerHTML;
+//         localStorage.setItem('card_' + cardId, JSON.stringify(someCard));
+//         totalCnt -= someCard.price;
+
+//     }
+// })
