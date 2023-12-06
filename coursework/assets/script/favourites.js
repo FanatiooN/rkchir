@@ -63,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let h2 = document.createElement('h2');
         h2.innerHTML = 'Упс... Здесь ничего нет.';
         let oops = document.querySelector('.oops');
-        console.log(oops);
         oops.appendChild(h2)
     }
 })

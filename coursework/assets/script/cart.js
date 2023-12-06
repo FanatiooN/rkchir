@@ -7,8 +7,10 @@ let totalCnt = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    for (let i = 1; i < maxCardCount; i++) {
+    for (let i = 0; i < maxCardCount; i++) {
         let someCard = localStorage.getItem('card_' + i);
+
+        console.log('i is:', i, someCard); ///////////////////////////////////////
 
         if (someCard != null && someCard != '') {
 
@@ -18,8 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
             let cnt = Number(someCard.count);
             if (cnt > 0) {
                 totalCnt += price * cnt;
-
-                console.log(someCard);
                 let cart_item = document.createElement('div');
                 cart_item.setAttribute('data-id', i);
                 cart_item.classList.add('cart_item')
@@ -47,31 +47,3 @@ document.addEventListener('DOMContentLoaded', () => {
     total_count.innerHTML = totalCnt;
 });
 
-
-// let buttons = document.querySelector('.cart_items')
-
-// buttons.addEventListener('click', (e) => {
-//     let target = e.target;
-    
-//     let count = target.parentElement.parentElement.querySelector('.count');
-//     console.log(count);
-//     if (target.classList.contains('increase')) 
-//     {
-//         let cardId = target.parentElement.parentElement.getAttribute('data-id');
-        
-//         let someCard = JSON.parse(localStorage.getItem('card_'+cardId))
-//         someCard.count = ++count.innerHTML;
-//         localStorage.setItem('card_' + cardId, JSON.stringify(someCard));
-        
-//         console.log(`upd local storage, ${localStorage.getItem('card_'+cardId)}`);
-//     }
-//     else if (target.classList.contains('decrease') &&
-//              count.innerHTML != 0) 
-//     {    
-//         let someCard = JSON.parse(localStorage.getItem('card_'+cardId))
-//         someCard.count = --count.innerHTML;
-//         localStorage.setItem('card_' + cardId, JSON.stringify(someCard));
-//         totalCnt -= someCard.price;
-
-//     }
-// })
