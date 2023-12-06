@@ -22,14 +22,14 @@ function getCardInfo(someCard) {
 
 document.addEventListener('DOMContentLoaded', () => {
     let cardArr = cards.querySelectorAll('.card');
-    localStorage.setItem('cardCount', cardArr.length);
+    window.localStorage.setItem('cardCount', cardArr.length);
 
     for (let i = 0; i < cardArr.length; i++) {
 
         let someCard = cardArr[i];
         let someCardInfo = getCardInfo(someCard);
 
-        localStorage.setItem('card_' + (i+1), JSON.stringify(someCardInfo));
+        window.localStorage.setItem('card_' + (i+1), JSON.stringify(someCardInfo));
     }
 })
 
@@ -51,6 +51,6 @@ cards.addEventListener('click', (e) => {
 
         let someCardInfo = getCardInfo(someCard);
         let cardId = someCard.getAttribute('data-id');
-        localStorage.setItem('card_' + cardId, JSON.stringify(someCardInfo));
+        window.localStorage.setItem('card_' + cardId, JSON.stringify(someCardInfo));
     }
 });

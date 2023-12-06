@@ -10,15 +10,16 @@ buttons.addEventListener('click', (e) => {
     if (target.classList.contains('increase')) 
     {
         
-        let someCard = JSON.parse(localStorage.getItem('card_'+cardId))
-        console.log('card_'+cardId, someCard);
+        let someCard = JSON.parse(window.localStorage.getItem('card_'+cardId))
+
         someCard.count = ++count.innerHTML;
-        localStorage.setItem('card_' + cardId, JSON.stringify(someCard));
+        window.localStorage.setItem('card_' + cardId, JSON.stringify(someCard));
         
         
         if (buttons.classList.contains('cart_items')) {
             let price = targetPP.querySelector('.price');
             let cost = targetPP.querySelector('.cost');
+            console.log(price, price.innerHTML, cost, cost.innerHTML);
             totalCnt += price.innerHTML;
             cost.innerHTML = `${price.innerHTML * count.innerHTML} р`;
         }
@@ -26,12 +27,12 @@ buttons.addEventListener('click', (e) => {
     else if (target.classList.contains('decrease') &&
              count.innerHTML != 0) 
     {    
-        let someCard = JSON.parse(localStorage.getItem('card_'+cardId))
+        let someCard = JSON.parse(window.localStorage.getItem('card_'+cardId))
         someCard.count = --count.innerHTML;
-        localStorage.setItem('card_' + cardId, JSON.stringify(someCard));
+        window.localStorage.setItem('card_' + cardId, JSON.stringify(someCard));
         
     }
-    console.log(localStorage.getItem('card_' + (cardId )));
+    console.log(window.localStorage.getItem('card_' + (cardId )));
 
 
 })
