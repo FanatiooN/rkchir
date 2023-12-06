@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < maxCardCount; i++) {
         let someCard = localStorage.getItem('card_' + i);
 
-        console.log('i is:', i, someCard); ///////////////////////////////////////
+        console.log('i is:', i, someCard);
 
         if (someCard != null && someCard != '') {
 

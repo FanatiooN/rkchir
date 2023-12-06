@@ -4,14 +4,14 @@ let buttons = document.querySelector('.cards') ||
 buttons.addEventListener('click', (e) => {
     let target = e.target;
     let targetPP = e.target.parentElement.parentElement;
-    let cardId = target.getAttribute('data-id');
+    let cardId = targetPP.getAttribute('data-id');
     let count = targetPP.querySelector('.count');
     
     if (target.classList.contains('increase')) 
     {
         
         let someCard = JSON.parse(localStorage.getItem('card_'+cardId))
-        
+        console.log('card_'+cardId, someCard);
         someCard.count = ++count.innerHTML;
         localStorage.setItem('card_' + cardId, JSON.stringify(someCard));
         
