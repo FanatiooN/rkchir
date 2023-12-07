@@ -140,7 +140,11 @@ body,
 
     .reviews {
         flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .review {
+        width: 15rem;
         margin: 0 auto;
-        width: 80%;
     }
 }
