@@ -162,3 +162,24 @@
     font-weight: 400;
     line-height: 30px;
 }
+
+@media screen and (max-width: 1024px) {
+    .cart {
+        width: 500px;
+    }
+
+    .cart_item .cost {
+        min-width: 80px;
+    }
+    .cart_item {
+        width: 450px;
+    }
+
+    .cart_item .description {
+        width: 230px;
+    }
+
+    .end_cart {
+        gap: 40px;
+    }
+}
