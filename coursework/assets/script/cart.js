@@ -70,7 +70,7 @@ submit_cart_button.addEventListener('click', () => {
     if (totalItemsCnt > 0)
         {
             
-            message = `Заказ из ${totalItemsCnt} товар${totalItemsCnt % 10 == 1? 'а': 'ов'} был оформлен!`;
+            message = `Заказ из ${totalItemsCnt} товар${totalItemsCnt % 10 == 1 && totalItemsCnt != 11? 'а': 'ов'} был оформлен!`;
         }
 
     cart_items.innerHTML = '';
