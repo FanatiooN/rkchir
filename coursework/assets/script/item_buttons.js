@@ -2,7 +2,13 @@ let buttons = document.querySelector('.cards') ||
               document.querySelector('.cart_items')
 
 buttons.addEventListener('click', (e) => {
+
+    
     let target = e.target;
+    
+    if (target.classList.contains('trash')) return;
+
+    
     let targetPP = e.target.parentElement.parentElement;
     let cardId = targetPP.getAttribute('data-id');
     let count = targetPP.querySelector('.count');

@@ -3,7 +3,7 @@ const cart_items = document.querySelector('.cart_items');
 const total_count = document.querySelector('.total_count');
 
 let maxCardCount = 100;
-let totalCnt = 0;
+let totalSum = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let price = Number(someCard.price);
             let cnt = Number(someCard.count);
             if (cnt > 0) {
-                totalCnt += price * cnt;
+                totalSum += price * cnt;
                 let cart_item = document.createElement('div');
                 cart_item.setAttribute('data-id', i);
                 cart_item.classList.add('cart_item')
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    total_count.innerHTML = `Итоговая сумма: ${totalCnt}`;
+    total_count.innerHTML = `Итоговая сумма: ${totalSum}`;
 });
 
 
@@ -88,9 +88,35 @@ submit_cart_button.addEventListener('click', () => {
 
     }
 
-    totalCnt = 0;
-    total_count.innerHTML = `Итоговая сумма: ${totalCnt}`;
+    totalSum = 0;
+    total_count.innerHTML = `Итоговая сумма: ${totalSum}`;
 
-    
+
     alert(message);
+})
+
+
+
+
+cart_items.addEventListener('click', (e) => {
+
+    let target = e.target;
+
+    if (target.classList.contains('trash')) {
+        let someCard = target.parentElement;
+
+        let cost = someCard.querySelector('.cost').innerHTML;
+        console.log(String(cost).split(' ')[0]);
+        cost = String(cost).split(' ')[0];
+
+        totalSum -= Number(cost);
+        total_count.innerHTML = `Итоговая сумма: ${totalSum}`;
+
+        someCard.count = 0;
+
+        window.localStorage.setItem('card_'+someCard.getAttribute('data-id'), JSON.stringify(someCard));
+
+        cart_items.removeChild(someCard);
+        
+    }
 })
