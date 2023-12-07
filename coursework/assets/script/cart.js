@@ -67,7 +67,6 @@ submit_cart_button.addEventListener('click', () => {
     }
 
     let message = 'Упс.. В корзине нет товаров!';
-    console.log(message, totalItemsCnt);
     if (totalItemsCnt > 0)
         {
             message = `Заказ из ${totalItemsCnt} товаров был оформлен!`;
@@ -106,7 +105,6 @@ cart_items.addEventListener('click', (e) => {
         let someCard = target.parentElement;
 
         let cost = someCard.querySelector('.cost').innerHTML;
-        console.log(String(cost).split(' ')[0]);
         cost = String(cost).split(' ')[0];
 
         totalSum -= Number(cost);

@@ -29,13 +29,13 @@ buttons.addEventListener('click', (e) => {
             price = String(price.innerHTML).split(' ')[0];
             price = Number(price);
 
-            totalCnt += price;
+            totalSum += price;
 
             let cart = targetPP.parentElement.parentElement;
             
             let total_count = cart.querySelector('.total_count');
             
-            total_count.innerHTML = `Итоговая сумма: ${totalCnt}`;
+            total_count.innerHTML = `Итоговая сумма: ${totalSum}`;
 
             cost.innerHTML = `${price * count.innerHTML} р`;
         }

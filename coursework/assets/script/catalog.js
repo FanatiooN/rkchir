@@ -8,9 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let cardId = cardArr[i].getAttribute('data-id');
 
         let someCard = window.localStorage.getItem('card_' + cardId);
-        console.log(someCard);
         someCard = JSON.parse(someCard)
-        console.log(someCard.count);
 
         someCard.count = someCard.count ?? 0;
         count.innerHTML = someCard.count;

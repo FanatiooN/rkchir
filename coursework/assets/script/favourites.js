@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 let isExist = false;
                 for (let card of cards.querySelectorAll('.card')) {
                     if (card.getAttribute('data-id') == i) {
-                        console.log('exist', i);
                         isExist = true;
                         break;
                     }
