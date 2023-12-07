@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     let closeIcon = document.querySelector(".closeIcon");
     let menuIcon = document.querySelector(".menuIcon");
-    let menu = document.querySelector("header ul");
+    let menu = document.querySelector("header nav");
     
 
     closeIcon.style.display = "none";

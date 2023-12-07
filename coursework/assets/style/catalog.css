@@ -153,15 +153,18 @@
 
 @media screen and (max-width: 1024px) {
     .cards {
-        margin: 2%;
+        margin: 0 auto;
         gap: 50px;
         grid-template-columns: repeat(2, 1fr);
     }
+
+    
 }
 
 
 @media screen and (max-width: 768px) {
     .cards {
+        margin: 3%;
         grid-template-columns: repeat(1, 1fr);
     }
 }

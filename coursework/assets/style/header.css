@@ -83,18 +83,22 @@ header .showMenu {
 @media screen and (max-width: 1024px) {
 
     header nav button {
-        display: none;
+        text-align: center;
+        align-self: center;
+        margin: 0 auto;
+        width: 200%;
     }
-
+    header a[href='cart.html'] {
+        margin: 0 auto;
+    }
     header .hamburger {
         display: block;
     }
 
 
-    header ul {
+    header nav {
         display: flex;
         flex-direction: column;
-        
         
         position: fixed;
         transform: translateY(-100%);
@@ -110,12 +114,18 @@ header .showMenu {
         padding-top: 4rem;
     }
 
+    header ul {
+        flex-direction: column;
+    }
+    header li {
+        padding-top: 4rem;
+    }
+
      
     header ul a {
         display: block;
         width: 8rem;
-        margin-left: 30%;
-        margin-right: auto;
+        margin: 0 auto;
     }
 
 }
