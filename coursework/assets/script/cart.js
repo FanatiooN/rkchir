@@ -58,6 +58,7 @@ submit_cart_button.addEventListener('click', () => {
 
 
         if (someCard != null && someCard != '') {
+            someCard = JSON.parse(someCard)
             let cnt = Number(someCard.count);
             if (cnt > 0) {
                 totalItemsCnt += cnt;
@@ -66,8 +67,11 @@ submit_cart_button.addEventListener('click', () => {
     }
 
     let message = 'Упс.. В корзине нет товаров!';
-    if (totalItemsCnt)
-        message = `Заказ из ${totalItemsCnt} был оформлен!`;
+    console.log(message, totalItemsCnt);
+    if (totalItemsCnt > 0)
+        {
+            message = `Заказ из ${totalItemsCnt} товаров был оформлен!`;
+        }
 
     cart_items.innerHTML = '';
     for (let i = 0; i < maxCardCount; i++) {
@@ -83,5 +87,10 @@ submit_cart_button.addEventListener('click', () => {
         }
 
     }
+
+    totalCnt = 0;
+    total_count.innerHTML = `Итоговая сумма: ${totalCnt}`;
+
+    
     alert(message);
 })
