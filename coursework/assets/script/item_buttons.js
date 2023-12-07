@@ -47,6 +47,24 @@ buttons.addEventListener('click', (e) => {
         someCard.count = --count.innerHTML;
         window.localStorage.setItem('card_' + cardId, JSON.stringify(someCard));
         
+        
+        if (buttons.classList.contains('cart_items')) {
+            let price = targetPP.querySelector('.price');
+            let cost = targetPP.querySelector('.cost');
+            
+            price = String(price.innerHTML).split(' ')[0];
+            price = Number(price);
+
+            totalSum -= price;
+
+            let cart = targetPP.parentElement.parentElement;
+            
+            let total_count = cart.querySelector('.total_count');
+            
+            total_count.innerHTML = `Итоговая сумма: ${totalSum}`;
+
+            cost.innerHTML = `${price * count.innerHTML} р`;
+        }
     }
 
 
