@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     let cardArr = document.querySelectorAll('.card')
-    window.localStorage.setItem('cardCount', cardArr.length) || 0;
+    window.localStorage.setItem('cardCount', cardArr.length);
 
     for (let i = 0; i < window.localStorage.getItem('cardCount'); i++) {
 

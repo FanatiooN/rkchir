@@ -47,10 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-const submit_cart_button = document.querySelector('.submit_cart_button');
-
-submit_cart_button.addEventListener('click', () => {
+function createOrder() {
     let totalItemsCnt = 0;
 
     for (let i = 0; i < maxCardCount; i++) {
@@ -67,11 +64,10 @@ submit_cart_button.addEventListener('click', () => {
     }
 
     let message = 'Упс.. В корзине нет товаров!';
-    if (totalItemsCnt > 0)
-        {
-            
-            message = `Заказ из ${totalItemsCnt} товар${totalItemsCnt % 10 == 1 && totalItemsCnt != 11? 'а': 'ов'} был оформлен!`;
-        }
+    if (totalItemsCnt > 0) {
+
+        message = `Заказ из ${totalItemsCnt} товар${totalItemsCnt % 10 == 1 && totalItemsCnt != 11 ? 'а' : 'ов'} был оформлен!`;
+    }
 
     cart_items.innerHTML = '';
     for (let i = 0; i < maxCardCount; i++) {
@@ -83,7 +79,7 @@ submit_cart_button.addEventListener('click', () => {
             someCard = JSON.parse(someCard);
             someCard.count = 0;
 
-            window.localStorage.setItem('card_'+i, JSON.stringify(someCard));
+            window.localStorage.setItem('card_' + i, JSON.stringify(someCard));
         }
 
     }
@@ -93,29 +89,26 @@ submit_cart_button.addEventListener('click', () => {
 
 
     alert(message);
-})
+}
+
+const submit_cart_button = document.querySelector('.submit_cart_button');
+submit_cart_button.addEventListener('click', createOrder);
 
 
 
 
-cart_items.addEventListener('click', (e) => {
-
+function removeCartItem(e) {
     let target = e.target;
-
     if (target.classList.contains('trash')) {
         let someCard = target.parentElement;
-
         let cost = someCard.querySelector('.cost').innerHTML;
         cost = String(cost).split(' ')[0];
-
         totalSum -= Number(cost);
         total_count.innerHTML = `Итоговая сумма: ${totalSum}`;
-
         someCard.count = 0;
-
-        window.localStorage.setItem('card_'+someCard.getAttribute('data-id'), JSON.stringify(someCard));
-
+        window.localStorage.setItem('card_' + someCard.getAttribute('data-id'), JSON.stringify(someCard));
         cart_items.removeChild(someCard);
-        
     }
-})
+}
+
+cart_items.addEventListener('click', removeCartItem);
