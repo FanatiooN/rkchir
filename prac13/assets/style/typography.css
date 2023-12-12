@@ -1,0 +1,128 @@
+* {
+    --main-font: "Montserrat Alternates";
+    /* --main-font: "DM Sans"; */
+    --primary-1: #e479c6;
+    --primary-2: #9B287B;
+    --primary-3: #ECCBD9;
+    --primary-4: #5C164E;
+    --secondary-1: #D9DBE9;
+    --neutral-800: #170F49;
+    --neutral-700: #514F6E;
+    --neutral-600: #6F6C90;
+    --neutral-500: #A0A3BD;
+    --neutral-400: #D9DBE9;
+    --neutral-300: #EFF0F6;
+    --neutral-200: #F7F7FB;
+    --neutral-100: #FFFFFF;
+    --active-like-color: #ffd3b6;
+}
+
+
+h1 {
+    font-family: var(--main-font);
+    font-weight: bold;
+    font-size: 70px;
+    text-align: center;
+}
+
+h2 {
+    font-family: var(--main-font);
+    font-size: 50px;
+}
+
+h3 {
+    font-family: var(--main-font);
+    font-size: 34px;
+}
+
+h4 {
+    font-family: var(--main-font);
+    font-size: 28px;
+}
+
+h5 {
+    font-family: var(--main-font);
+    font-size: 24px;
+}
+
+h6 {
+    font-family: var(--main-font);
+    font-size: 22px;
+}
+
+.large {
+    font-family: var(--main-font);
+    font-size: 38px;
+}
+
+.default {
+    font-family: var(--main-font);
+    font-size: 30px;
+}
+
+.small {
+    font-family: var(--main-font);
+    font-size: 24px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.normal {
+    font-weight: normal;
+}
+
+.colortext {
+    color: var(--primary-1);
+}
+
+
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-family: var(--main-font);
+        font-size: 60px;
+    }
+
+    h2 {
+        font-family: var(--main-font);
+        font-size: 38px;
+    }
+
+    h3 {
+        font-family: var(--main-font);
+        font-size: 24px;
+    }
+
+    h4 {
+        font-family: var(--main-font);
+        font-size: 22px;
+    }
+
+    h5 {
+        font-family: var(--main-font);
+        font-size: 18px;
+    }
+
+    h6 {
+        font-family: var(--main-font);
+        font-size: 16px;
+    }
+
+    .large {
+        font-family: var(--main-font);
+        font-size: 28px;
+    }
+
+    .default {
+        font-family: var(--main-font);
+        font-size: 20px;
+    }
+
+    .small {
+        font-family: var(--main-font);
+        font-size: 16px;
+    }
+}
+
