@@ -28,6 +28,9 @@
 
         <script defer src="assets/script/hamburger.js"></script>
         <script defer src="assets/script/index.js"></script>
+        <script defer src="assets/script/list.js"></script>
+        <script defer src="assets/script/slider.js"></script>
+        <script defer src="assets/script/cart.js"></script>
     </head>
     <body>
         <header>
@@ -80,7 +83,6 @@
                 </div>
                 <img class="bike" src="assets/image/orderonbike.svg"></div>
 
-
             <div id="wide-line">
 
                 <div class="wide-line-block">
@@ -104,6 +106,11 @@
 
             </div>
 
+            <div id="contents">
+                <a href="https://example.com">Это ссылка</a>.
+                <p><a href="https://example.com"><i>Это другая ссылка</i></a>.</p>
+            </div>
+
             <div class="gallery">
                 <div class="main_img">
 
@@ -124,8 +131,49 @@
                 </div>
             </div>
 
+            <ul id="myList">
+                <li>Элемент 1</li>
+                <li>Элемент 2</li>
+                <li>Элемент 3</li>
+                <li>Элемент 4</li>
+                <li>Элемент 5</li>
+            </ul>
 
+            <div class="slider">
+                <div class="slider-track">
+                    <div class="slider-thumb"></div>
+                </div>
+            </div>
+            <div class="loader"></div>
+
+
+            <div class="products">
+              <div class="product" id="product1" data-price="10.00">
+                <img src="assets/image/cat1.jpg" width="100">
+                <h4>10.00</h4>
+              </div>
+              <div class="product" id="product2" data-price="20.00">
+                <img src="assets/image/cat2.png" width="100">
+                <h4>20.00</h4>
+              </div>
+              <div class="product" id="product3" data-price="30.00">
+                <img src="assets/image/cat3.jpg" width="100">
+                <h4>30.00</h4>
+              </div>
+            </div>
             
+            <div class="cart">
+              <h1>Корзина</h1>
+              <h2 class="cart-total">Total: .00</h2>
+            </div>
+
+
+
+
+
+
+
+
 
             <h1>Отзывы</h1>
             <div class="reviews">
@@ -242,7 +290,6 @@
                 </div>
             </div>
         </main>
-
         <footer>
             <div class="wrap-footer-blocks">
                 <div class="footer-block footer-block-1">
