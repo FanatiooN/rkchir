@@ -31,8 +31,22 @@ contents.addEventListener('click', function (event) {
 
 let spinElement = document.querySelector('.loader');
 let rotation = 0;
+let i = 0;
+
+let old_color = spinElement.style
+console.log(old_color);
+
+function numberToHexColor(number) {
+    let hexColor = number.toString(16);
+    if (hexColor.length < 6) {
+        hexColor = '0' + hexColor;
+    }
+    return '#' + hexColor;
+}
 
 setInterval(() => {
-  rotation = (rotation + 7) % 360; 
-  spinElement.style.transform = `rotate(${rotation}deg)`;
-}, 1);
+    rotation = (rotation + 3) % 360;
+    spinElement.style.transform = `rotate(${rotation}deg)`;
+    if (rotation % 60 == 0)
+        spinElement.style.borderTopColor = numberToHexColor(Math.floor(Math.random() * 16777216));
+}, 10);

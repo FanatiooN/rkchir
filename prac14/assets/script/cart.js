@@ -5,7 +5,6 @@ let cart = {
 
 let products = document.querySelectorAll('.product');
 products.forEach(product => {
-    console.log(product); /////////////////////
     product.draggable = true;
     product.addEventListener('dragstart', function (event) {
         event.dataTransfer.setData('text/plain', this.id);
@@ -28,8 +27,7 @@ dropzone.addEventListener('drop', function (event) {
 });
 
 function updateCartTotal() {
-    
     console.log('2');
     let cartTotalElement = document.querySelector('.cart-total');
-    cartTotalElement.textContent = `Total: $${cart.totalCost.toFixed(2)}`;
+    cartTotalElement.textContent = `Итого: $${cart.totalCost.toFixed(2)}`;
 }
