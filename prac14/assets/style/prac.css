@@ -1,0 +1,30 @@
+.img_div {
+    --size: 90px;
+
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    
+    width: var(--size);
+    height: var(--size);
+}
+
+.img_div img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+
+}
+
+.gallery_side {
+    display: flex;
+    flex-direction: row;
+}
+
+.gallery {
+    background: var(--primary-2);
+    width: 300px;
+    height: 300px;
+}
