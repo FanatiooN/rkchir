@@ -69,10 +69,8 @@
 .selected {
     background: cyan;
 
-    li {
-        height: 100px;
-    }
 }
+
 
 .slider {
     width: 70%;
@@ -107,7 +105,7 @@
 .loader {
     border: 16px solid #f3f3f3;
     border-top: 16px solid #3498db;
-    
+
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -137,7 +135,7 @@
 }
 
 
-.cart { 
+.cart {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -148,4 +146,4 @@
     background-color: var(--primary-3);
     border-radius: 10px;
     text-align: center;
-} 
+}
