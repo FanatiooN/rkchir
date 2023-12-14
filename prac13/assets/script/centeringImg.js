@@ -24,21 +24,9 @@ img.onload = function() {
     img.style.top = (element.clientHeight - img.clientHeight) / 2 + 'px';
 };
 
-
-// вывод координат
 parent.addEventListener('click', function(event) {
     var x = event.clientX;
     var y = event.clientY;
     console.log(x, y);
 });
-
-
-// // делегирование
-
-// document.addEventListener('click', function(event){
-//     if (event.target.id == "delBtn"){
-//         event.target.parentNode.parentNode.removeChild(event.target.parentNode)
-//         updateCounter();
-//     }
-// })
 

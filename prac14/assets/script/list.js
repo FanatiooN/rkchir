@@ -1,34 +1,24 @@
 let list = document.querySelector('#myList');
 
-list.addEventListener('click', function(event) {
-  let target = event.target; // где был клик?
-
-  if (target.tagName != 'LI') return; // не на LI? тогда не интересует
-
-  // Ctrl или Cmd нажат?
-  let isCtrl = event.metaKey || event.ctrlKey;
-
-  if (isCtrl) {
-    toggleSelect(target);
-  } else {
-    singleSelect(target);
-  }
-
-}, false);
-
-list.onmousedown = function() {
-  return false; // отключить выделение текста (действие браузера по умолчанию)
+list.onmousedown = (event) => {
+  event.preventDefault();
 };
 
-function toggleSelect(li) {
-  li.classList.toggle('selected');
-}
 
-function singleSelect(li) {
-  let selected = list.querySelectorAll('.selected');
+list.addEventListener('click', function (event) {
+  let target = event.target;
+  if (target.tagName != 'LI') return;
 
-  for(let elem of selected) {
-    elem.classList.remove('selected');
+  let isCtrl = event.metaKey || event.ctrlKey;
+  if (isCtrl) {
+    target.classList.toggle('selected');
   }
-  li.classList.add('selected');
-}
+  else {
+    let selected = list.querySelectorAll('.selected');
+
+    for (let elem of selected) {
+      elem.classList.remove('selected');
+    }
+    target.classList.add('selected');
+  }
+}, false);

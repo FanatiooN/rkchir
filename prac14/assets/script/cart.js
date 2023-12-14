@@ -27,7 +27,6 @@ dropzone.addEventListener('drop', function (event) {
 });
 
 function updateCartTotal() {
-    console.log('2');
     let cartTotalElement = document.querySelector('.cart-total');
     cartTotalElement.textContent = `Итого: $${cart.totalCost.toFixed(2)}`;
 }

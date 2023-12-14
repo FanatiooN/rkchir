@@ -1,7 +1,7 @@
 let sliderThumb = document.querySelector('.slider-thumb');
 let sliderTrack = document.querySelector('.slider-track');
 
-sliderThumb.addEventListener('mousedown', function(event) {
+sliderThumb.addEventListener('mousedown', function (event) {
     event.preventDefault();
 
     let shiftX = event.clientX - sliderThumb.getBoundingClientRect().left;
@@ -29,7 +29,3 @@ sliderThumb.addEventListener('mousedown', function(event) {
     }
 
 });
-
-sliderThumb.ondragstart = function() {
-    return false;
-};

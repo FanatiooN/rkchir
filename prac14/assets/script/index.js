@@ -17,7 +17,7 @@ gallery_side.addEventListener('click', (e) => {
 
 let contents = document.querySelector('#contents')
 contents.addEventListener('click', function (event) {
-    var target = event.target;
+    let target = event.target;
     while (target != this) {
         if (target.tagName == 'A') {
             if (!confirm('Вы уверены, что хотите покинуть страницу?')) {
